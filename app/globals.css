@@ -34,3 +34,15 @@
 .section-padding {
   @apply py-10 md:py-20;
 }
+
+.line-flow {
+  @apply hover:text-accent relative duration-500;
+}
+
+.line-flow::after {
+  @apply content-[""] absolute w-0 h-[1px] left-[50%] -bottom-1 bg-accent -translate-x-1/2 origin-center duration-500;
+}
+
+.line-flow:hover::after {
+  @apply w-full;
+}
