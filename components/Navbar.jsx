@@ -32,7 +32,6 @@ const Navbar = () => {
       <header
         className='hidden md:flex h-24 justify-between items-center border-b border-black/10 bg-white/60 backdrop-blur-xl shadow-lg fixed top-0 left-0 right-0 z-[100] font-medium rounded-bl-3xl rounded-br-3xl'
         data-aos='slide-down'
-        data-aos-delay='0'
         data-aos-duration='1500'
         data-aos-easing='ease-in-out'
       >

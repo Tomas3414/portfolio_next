@@ -18,7 +18,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <main>
+    <main className='mt-24'>
       <Hero />
       <About />
       <Projects />
