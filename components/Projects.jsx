@@ -1,5 +1,11 @@
+import SectionTitle from "./SectionTitle";
+
 const Projects = () => {
-  return <section id='projects'>Projects</section>;
+  return (
+    <section id='projects'>
+      <SectionTitle title='Projects' />
+    </section>
+  );
 };
 
 export default Projects;
