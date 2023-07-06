@@ -46,3 +46,11 @@
 .line-flow:hover::after {
   @apply w-full;
 }
+
+.radial {
+  background: radial-gradient(
+    circle,
+    rgba(0, 183, 159, 0.2) 0%,
+    rgba(0, 183, 159, 0.03) 100%
+  );
+}
