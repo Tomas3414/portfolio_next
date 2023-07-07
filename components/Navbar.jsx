@@ -100,7 +100,7 @@ const Navbar = () => {
               data-aos-easing='ease-in-out'
             >
               <ButtonAsLink
-                href='https://drive.google.com/file/d/1N4YL7XPCoVWboYYXxeegCzSXAq1KhyWr/view'
+                href='https://drive.google.com/file/d/1v1bK2o8jI-ogJtaCIy1w5aUqpCObgHA5/view'
                 placeholder='View Resume'
                 target='_blank'
               />
@@ -234,7 +234,7 @@ const Navbar = () => {
               </li>
               <li className='list-none'>
                 <Link
-                  href='https://drive.google.com/file/d/1N4YL7XPCoVWboYYXxeegCzSXAq1KhyWr/view'
+                  href='https://drive.google.com/file/d/1v1bK2o8jI-ogJtaCIy1w5aUqpCObgHA5/view'
                   target='_blank'
                   className='hover:text-accent duration-500'
                 >
