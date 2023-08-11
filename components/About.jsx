@@ -7,74 +7,86 @@ const About = () => {
       <SectionTitle title='About me' />
 
       {/* ABOUT */}
-      <div className='about-content mt-20 relative h-auto lg:h-[70rem] xl:h-[65rem] 2xl:h-[60rem] overflow-hidden'>
-        <div
-          data-aos='flip-right'
-          data-aos-duration='1000'
-          data-aos-delay='1500'
-          data-aos-easing='ease-in-out'
-          data-aos-mirror='true'
-          data-aos-once='false'
-          className='about-image w-full lg:w-[40%] overflow-hidden rounded-2xl'
-        >
-          <Image
-            src='https://res.cloudinary.com/drgxflcsb/image/upload/v1676030149/Personal%20Portfolio/masud-image1_rejzqv.jpg'
-            alt='Masud Rana Shawon'
-            width={500}
-            height={500}
-            className='w-full h-full object-cover hover:scale-[1.1] duration-[2000ms]'
-          />
+      <div className='about-content grid grid-cols-1 lg:grid-cols-2 lg:text-left justify-center items-center gap-10 mt-20 overflow-hidden'>
+        {/* ABOUT IMAGE */}
+        <div className='about-left relative lg:p-10 lg:mb-10'>
+          <div
+            data-aos='flip-right'
+            data-aos-delay='1000'
+            data-aos-duration='1000'
+            data-aos-easing='ease-in-out'
+            className='w-full h-auto overflow-hidden rounded-3xl'
+          >
+            <Image
+              src='https://res.cloudinary.com/drgxflcsb/image/upload/v1676030149/Personal%20Portfolio/masud-image1_rejzqv.jpg'
+              alt='Masud Rana Shawon'
+              width={500}
+              height={500}
+              className='w-full h-full object-cover hover:scale-[1.1] duration-[2000ms]'
+            />
+          </div>
+          {/* ABOUT ROLE */}
+          <div
+            data-aos='zoom-in'
+            data-aos-duration='1000'
+            data-aos-delay='1000'
+            data-aos-easing='ease-in-out'
+            className='role m-10 hidden lg:block w-1/3 h-1/3 absolute -bottom-20 -right-20 rounded-full bg-light'
+          >
+            <div className='absolute z-10 w-1/3 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+              <Image
+                src='https://res.cloudinary.com/drgxflcsb/image/upload/v1691770982/nextjs-portfolio/working-emoji_mveu7a.png'
+                alt='emoji'
+                width={500}
+                height={500}
+                className='w-full h-full'
+              />
+            </div>
+            <div className='animate-text w-full h-full'>
+              <Image
+                src='https://res.cloudinary.com/drgxflcsb/image/upload/v1691770961/nextjs-portfolio/rounded-text_ijbmqb.png'
+                alt='text'
+                width={500}
+                height={500}
+                className='w-full h-full object-cover'
+              />
+            </div>
+          </div>
         </div>
 
-        {/* DETAILS */}
-        <div className='overflow-hidden'>
-          <div
-            data-aos='slide-left'
-            data-aos-duration='1000'
-            data-aos-delay='1800'
-            data-aos-easing='ease-in-out'
-            data-aos-mirror='true'
-            data-aos-once='false'
-            className='about-details w-full lg:w-[63%] lg:absolute right-0 top-[10rem] radial backdrop-blur-xl p-10 rounded-2xl space-y-5'
-          >
-            {/* SHORT INTRO */}
+        {/* ABOUT TEXT DETAILS*/}
+        <div className='about-right space-y-5 lg:p-10'>
+          {/* SHORT INTRO */}
+          <div className='overflow-hidden'>
             <h2
-              data-aos='flip-down'
+              data-aos='slide-down'
               data-aos-duration='1000'
               data-aos-delay='1000'
               data-aos-easing='ease-in-out'
-              data-aos-mirror='true'
-              data-aos-once='false'
-              className='text-[1rem] md:text-[1.8rem]  lg:text-[2.1rem] xl:text-[2.6rem] font-bold leading-snug'
+              className='text-[1.1rem] md:text-[1.2rem] lg:text-[1.4rem] xl:text-[1.9rem] 2xl:text-[2.2rem] font-medium leading-snug'
             >
-              <span className='block mb-5'>Hello,</span> My name is Masud Rana
-              Shawon i&apos;m a<span className='text-accent'> passionate </span>
+              I&apos;m a<span className='text-accent'> passionate </span>
               and <span className='text-accent'>innovative</span> web developer
               with a strong focus on
               <span className='text-accent'> mern stack</span>.
             </h2>
-            {/* DISCRIPTIVE INFORMATION */}
+          </div>
+          {/* DISCRIPTIVE INFORMATION */}
+          <div className='overflow-hidden'>
             <p
-              data-aos='slide-up'
+              data-aos='slide-left'
+              data-aos-delay='1500'
               data-aos-duration='1000'
               data-aos-easing='ease-in-out'
-              data-aos-mirror='true'
-              data-aos-once='false'
-              className='text-[1.5rem] leading-[1.2]'
+              className='text-[1rem] xl:text-2xl tracking-wide leading-[1.5]'
             >
-              Welcome to my personal portfolio! I have a deep love for
-              JavaScript, and I am constantly immersing myself in learning and
-              exploring its intricacies. It is a language that fascinates me
-              with its versatility and power to create dynamic and interactive
-              web applications. I am passionate about leveraging MERN Stack
-              development to build innovative solutions and push the boundaries
-              of what can be achieved. With an insatiable curiosity, I
-              continuously seek to expand my knowledge and expertise in MERN
-              Stack development, staying up-to-date with the latest developments
-              and best practices. By harnessing the full potential of this
-              remarkable language, I aim to create impactful projects that make
-              a meaningful difference and contribute to the advancement of
-              technology.
+              Welcome to my portfolio! I&apos;m deeply passionate about
+              JavaScript and its ability to create dynamic web applications. I
+              thrive on MERN stack development, constantly learning and pushing
+              boundaries to build innovative solutions. My insatiable curiosity
+              drives me to stay updated with the latest developments, aiming to
+              create impactful projects that contribute to technological
+              advancement.
             </p>
           </div>
         </div>

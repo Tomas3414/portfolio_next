@@ -54,3 +54,13 @@
     rgba(0, 183, 159, 0.03) 100%
   );
 }
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-text {
+  animation: rotate 9s linear infinite;
+}

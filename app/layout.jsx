@@ -11,7 +11,7 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "Masud Rana Shawon | Home",
+  title: "Masud Rana Shawon",
 };
 
 export default function RootLayout({ children }) {
