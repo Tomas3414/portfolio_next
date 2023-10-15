@@ -26,6 +26,11 @@
   color: #f9f9f9;
 }
 
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
+
 /* COMMON STYLES */
 .wrapper {
   @apply container mx-auto px-5 md:px-0;
