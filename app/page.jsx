@@ -12,6 +12,8 @@ import "aos/dist/aos.css";
 const HomePage = () => {
   useEffect(() => {
     AOS.init();
+    AOS.refresh();
+    AOS.refreshHard();
   }, []);
 
   return (
