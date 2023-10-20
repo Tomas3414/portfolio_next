@@ -1,12 +1,12 @@
 "use client";
 
-import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
+import { FaCode } from "react-icons/fa";
+import Link from "next/link";
 import clsx from "clsx";
 import ButtonAsLink from "./ButtonAsLinks";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaCode } from "react-icons/fa";
 
 const Navbar = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -100,8 +100,8 @@ const Navbar = () => {
               data-aos-easing='ease-in-out'
             >
               <ButtonAsLink
-                href='https://drive.google.com/file/d/18EsCQiC_3ckbnaPCoWj7ZeZUq_OTRCqR/view?usp=sharing'
-                placeholder='View Resume'
+                href='https://drive.google.com/uc?export=download&id=1e1fFCCgcWwN4XP7Es6wAeUesUIrjZgFv'
+                placeholder='Download Resume'
                 target='_blank'
               />
             </div>
@@ -234,7 +234,7 @@ const Navbar = () => {
               </li>
               <li className='list-none'>
                 <Link
-                  href='https://drive.google.com/file/d/1cVork7IICxhJxTga6NlhJ8pZF_8LzIOG/view'
+                  href='https://drive.google.com/uc?export=download&id=1e1fFCCgcWwN4XP7Es6wAeUesUIrjZgFv'
                   target='_blank'
                   className='hover:text-accent duration-500'
                 >
