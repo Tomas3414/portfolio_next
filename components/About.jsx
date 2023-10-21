@@ -11,7 +11,7 @@ const About = () => {
         {/* ABOUT IMAGE */}
         <div className='about-left relative lg:p-10 lg:mb-10'>
           <div
-            data-aos='flip-right'
+            data-aos='fade-right'
             data-aos-delay='1000'
             data-aos-duration='1000'
             data-aos-easing='ease-in-out'
