@@ -2,6 +2,7 @@ import { useState } from "react";
 import { data } from "@/data/skills";
 import SectionTitle from "./SectionTitle";
 import SkillCard from "./SkillCard";
+import clsx from "clsx";
 
 const Skills = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -19,11 +20,14 @@ const Skills = () => {
         {data.map((tab, index) => (
           <button
             key={index}
-            className={`px-4 py-2 mx-2 rounded-lg ${
+            className={clsx(
               index === activeTab
                 ? "bg-accent text-white"
-                : "bg-white text-gray-700"
-            }`}
+                : "bg-white text-dark/90",
+              index === 0 && "rounded-bl-2xl",
+              index === data.length - 1 && "rounded-tr-2xl",
+              "flex h-[3rem] w-[10rem] items-center justify-center whitespace-nowrap border px-6 py-3 text-center text-lg font-semibold uppercase tracking-widest"
+            )}
             onClick={() => handleTabClick(index)}
           >
             {tab.name}
@@ -32,7 +36,7 @@ const Skills = () => {
       </div>
 
       {/* Render the content of the active tab */}
-      <div className='grid grid-cols-2 md:grid-cols-6 gap-4 mt-10'>
+      <div className='lg:px-14 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-5 mt-10'>
         {data[activeTab].content.map((skill, i) => (
           <SkillCard key={i} skill={skill} />
         ))}

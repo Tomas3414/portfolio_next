@@ -3,6 +3,7 @@ export const data = [
     id: 1,
     title: "Learnify",
     category: "An Online Learning Platform",
+    completeDate: "July 25, 2023",
     image:
       "https://res.cloudinary.com/drgxflcsb/image/upload/v1697742030/Personal%20Portfolio/rxuiebokgoz2n79msynl.webp",
     height: 9646,
@@ -29,6 +30,7 @@ export const data = [
     id: 2,
     title: "Proxima",
     category: "Project Management Web Application",
+    completeDate: "August 09, 2023",
     image:
       "https://res.cloudinary.com/drgxflcsb/image/upload/v1697750719/nextjs-portfolio/ysyokyyf8nsavunadvay.webp",
     height: 1938,
@@ -53,6 +55,7 @@ export const data = [
     id: 3,
     title: "Tech Alpha",
     category: "Online Electronics Accessories Store",
+    completeDate: "March 03, 2023",
     image:
       "https://res.cloudinary.com/drgxflcsb/image/upload/v1697661376/nextjs-portfolio/xwxphh03asspenxhqfo6.webp",
     height: 3823,
@@ -70,6 +73,7 @@ export const data = [
     id: 4,
     title: "Foodverse",
     category: "A Recipe Finder Web Application",
+    completeDate: "December 27, 2023",
     image:
       "https://res.cloudinary.com/drgxflcsb/image/upload/v1697665183/nextjs-portfolio/kw4gl2ap8bqsrbjjd3ty.webp",
     height: 4640,

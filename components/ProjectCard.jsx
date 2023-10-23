@@ -10,16 +10,16 @@ const ProjectCard = ({ project }) => {
   return (
     <div
       data-aos='fade-up'
-      className='relative md:grid md:grid-cols-12 w-full md:h-[30rem] p-5 md:p-0 bg-white md:bg-transparent rounded-lg md:rounded-none space-y-5 md:space-y-0 md:items-center'
+      className='relative lg:grid lg:grid-cols-12 w-full lg:h-[30rem] p-5 lg:p-0 bg-white lg:bg-transparent rounded-lg lg:rounded-none space-y-5 lg:space-y-0 lg:items-center'
     >
       {/* Project image */}
-      <div className='z-10 md:py-4 md:absolute md:grid grid-cols-12 w-full h-full content-center'>
+      <div className='z-10 lg:py-4 lg:absolute lg:grid grid-cols-12 w-full h-full content-center'>
         <div
           className={clsx(
             !project.revarse
               ? "col-span-7 "
               : "xl:col-span-7 xl:col-start-6 col-start-5 col-span-8",
-            "relative rounded w-full overflow-hidden h-[28rem] md:hover:shadow-xl hover:border hover:border-accent/5 bg-dark/20 duration-300"
+            "relative rounded w-full overflow-hidden h-[28rem] :hover:shadow-xl hover:border hover:border-accent/5 bg-dark/20 duration-300"
           )}
         >
           <Link href={project.liveLink} target='_blank'>
@@ -47,40 +47,58 @@ const ProjectCard = ({ project }) => {
       </div>
 
       {/* Project Details */}
-      <div className='md:absolute md:left-0 md:top-0 md:py-4 md:grid md:grid-cols-12 w-full h-full content-center items-center'>
+      <div className='lg:absolute lg:left-0 lg:top-0 lg:py-4 lg:grid lg:grid-cols-12 w-full h-full content-center items-center'>
         <div
           className={clsx(
             !project.revarse
-              ? "xl:col-span-6 xl:col-start-7 col-start-5 col-span-8 flex flex-col items-start md:items-end space-y-3"
-              : "col-span-6 flex flex-col items-start md:items-start space-y-3"
+              ? "xl:col-span-6 xl:col-start-7 col-start-5 col-span-8 flex flex-col items-start lg:items-end space-y-3"
+              : "col-span-6 flex flex-col items-start lg:items-start space-y-3"
           )}
         >
           <div
             className={clsx(
-              !project.revarse ? "md:items-end" : "md:items-start",
+              !project.revarse ? "lg:items-end" : "lg:items-start",
               "flex flex-col space-y-1 z-10"
             )}
           >
-            <a
-              href={project.liveLink}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <h2 className='text-dark font-bold text-2xl hover:cursor-pointer leading-relaxed tracking-wider'>
-                {project.title}
+            {!project.revarse ? (
+              <h2 className='text-dark font-bold text-2xl leading-relaxed tracking-wider flex gap-2 items-center'>
+                <span className='font-normal italic text-lg'>
+                  ({project.completeDate})
+                </span>
+                <a
+                  href={project.liveLink}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {project.title}
+                </a>
               </h2>
-            </a>
+            ) : (
+              <h2 className='text-dark font-bold text-2xl leading-relaxed tracking-wider flex gap-2 items-center'>
+                <a
+                  href={project.liveLink}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {project.title}
+                </a>
+                <span className='font-normal italic text-lg'>
+                  ({project.completeDate})
+                </span>
+              </h2>
+            )}
             <span className='text-accent text-base'>{project.category}</span>
           </div>
           <div
             className={clsx(
               !project.revarse ? "bg-gradient-to-tr" : "bg-gradient-to-bl",
-              "to-teal-700 from-teal-600 w-full rounded-md p-3 md:p-6 z-10"
+              "to-teal-700 from-teal-600 w-full rounded-md p-3 lg:p-6 z-10"
             )}
           >
             <p
               className={clsx(
-                !project.revarse ? "md:text-right" : "md:text-left",
+                !project.revarse ? "lg:text-right" : "lg:text-left",
                 "text-light text-left text-lg leading-relaxed"
               )}
             >
@@ -89,8 +107,8 @@ const ProjectCard = ({ project }) => {
           </div>
           <div
             className={clsx(
-              !project.revarse ? "md:justify-end" : "md:justify-start",
-              "flex gap-3 flex-wrap w-[85%] text-dark/60 md:text-gray-400 text-sm leading-3"
+              !project.revarse ? "lg:justify-end" : "lg:justify-start",
+              "flex gap-3 flex-wrap w-[85%] text-dark/60 lg:text-gray-400 text-sm leading-3"
             )}
           >
             {project.tools.map((tool, i) => (
@@ -104,7 +122,7 @@ const ProjectCard = ({ project }) => {
               href={project.liveLink}
               target={"_blank"}
               rel='noreferrer'
-              className='flex gap-1 items-center hover:text-accent duration-300'
+              className='flex gap-1 items-center hover:text-accent duration-300 whitespace-nowrap'
             >
               <span>Live Demo</span>
               <FiExternalLink />
@@ -115,7 +133,7 @@ const ProjectCard = ({ project }) => {
                 href={project.fullStackLink}
                 target={"_blank"}
                 rel='noreferrer'
-                className='flex gap-1 items-center hover:text-accent duration-300'
+                className='flex gap-1 items-center hover:text-accent duration-300 whitespace-nowrap'
               >
                 <span>Full-Stack</span>
                 <FiGithub />
@@ -127,7 +145,7 @@ const ProjectCard = ({ project }) => {
                 href={project.frontEndLink}
                 target={"_blank"}
                 rel='noreferrer'
-                className='flex gap-1 items-center hover:text-accent duration-300'
+                className='flex gap-1 items-center hover:text-accent duration-300 whitespace-nowrap'
               >
                 <span>Front-End</span>
                 <FiGithub />
@@ -139,7 +157,7 @@ const ProjectCard = ({ project }) => {
                 href={project.backEndLink}
                 target={"_blank"}
                 rel='noreferrer'
-                className='flex gap-1 items-center hover:text-accent duration-300'
+                className='flex gap-1 items-center hover:text-accent duration-300 whitespace-nowrap'
               >
                 <span>Back-End</span>
                 <FiGithub />

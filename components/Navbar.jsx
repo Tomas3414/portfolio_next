@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <>
       <header
-        className='hidden md:flex h-24 justify-between items-center border-b border-black/10 bg-white/60 backdrop-blur-xl shadow-lg fixed top-0 left-0 right-0 z-[100] font-medium rounded-bl-3xl rounded-br-3xl'
+        className='hidden lg:flex h-24 justify-between items-center border-b border-black/10 bg-white/60 backdrop-blur-xl shadow-lg fixed top-0 left-0 right-0 z-[100] font-medium rounded-bl-3xl rounded-br-3xl'
         data-aos='slide-down'
         data-aos-delay='700'
         data-aos-duration='1500'
@@ -50,7 +50,7 @@ const Navbar = () => {
               <span className='text-2xl text-accent animate-bounce'>
                 <FaCode />
               </span>
-              <Link href='/' className='line-flow'>
+              <Link href='/' className='line-flow whitespace-nowrap'>
                 Masud Rana Shawon
               </Link>
             </div>
@@ -111,7 +111,7 @@ const Navbar = () => {
 
       {/* MOBILE NAVIGATION */}
       <header
-        className='md:hidden flex h-24 justify-between items-center border-b border-dark/10 bg-light/60 backdrop-blur-xl shadow-xl fixed top-0 left-0 right-0 z-[100]'
+        className='lg:hidden flex h-24 justify-between items-center border-b border-dark/10 bg-light/60 backdrop-blur-xl shadow-xl fixed top-0 left-0 right-0 z-[100]'
         data-aos='slide-down'
         data-aos-duration='1500'
         data-aos-easing='ease-in-out'
