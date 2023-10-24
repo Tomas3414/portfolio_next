@@ -13,7 +13,7 @@ const Skills = () => {
 
   return (
     <div className='wrapper section-padding' id='skills'>
-      <SectionTitle title='Skills' />
+      <SectionTitle title='My Skills' />
 
       {/* Render the tabs as buttons */}
       <div className='flex justify-center mt-20'>
