@@ -33,7 +33,7 @@ const Hero = () => {
                 <TbMathGreater />
               </span>
               <span>Hello</span>
-              <span className='animate-pulse inline-block text-dark/60 font-semibold -mb-3'>
+              <span className='animate-pulse inline-block text-dark/80 font-semibold -mb-3'>
                 —
               </span>
             </p>
@@ -81,7 +81,7 @@ const Hero = () => {
               societal impact.
             </p>
           </div>
-          <div className='overflow-hidden'>
+          <div>
             <div
               data-aos='flip-up'
               data-aos-delay='1000'
@@ -89,6 +89,7 @@ const Hero = () => {
               data-aos-mirror='true'
               data-aos-once='false'
               data-aos-easing='ease-out-cubic'
+              className='my-2'
             >
               <ButtonAsLink
                 href='#contact'

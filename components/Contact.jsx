@@ -19,11 +19,11 @@ const Contact = () => {
         {/* CONTACT DETAILS */}
         <div className='contact-details'>
           <p className='text-accent tracking-wider'>Get in touch</p>
-          <h2 className='text-4xl font-bold leading-normal'>
+          <h2 className='lg:text-4xl text-3xl font-bold leading-normal'>
             Unlocking the Next Level of Possibilities ! Let&apos;s Connect.
           </h2>
 
-          <address className='not-italic space-y-5 mt-5'>
+          <address className='not-italic space-y-8 mt-10'>
             <div className='social-network space-y-2'>
               <h4 className='text-xl font-bold'>Social network</h4>
 
@@ -78,9 +78,10 @@ const Contact = () => {
             </div>
 
             <div className='mail'>
-              <h4 className='text-xl font-bold'>Mail</h4>
+              <h4 className='text-xl font-bold space-y-2'>Talks via mail!</h4>
               <Link
                 href='mailto:masudranashawon1@gmail.com'
+                target='_blank'
                 className='text-dark/80 lowercase text-lg line-flow'
               >
                 masudranashawon1@gmail.com
@@ -88,35 +89,56 @@ const Contact = () => {
             </div>
 
             <div className='address'>
-              <h4 className='text-xl font-bold'>Address</h4>
-              <p className='text-dark/80 text-lg'>Dhaka, Bangladesh</p>
+              <h4 className='text-xl font-bold space-y-2'>Address</h4>
+              <Link
+                href='https://maps.app.goo.gl/WCRRkontEbpGqQqR8'
+                target='_blank'
+                className='text-dark/80 text-lg line-flow'
+              >
+                Dhaka, Bangladesh
+              </Link>
             </div>
           </address>
         </div>
 
         {/* CONTACT FORM */}
-        <div className='contact-form bg-accent p-10 rounded-2xl'>
-          <form className='flex flex-col'>
-            <input
-              type='text'
-              name='name'
-              placeholder='Name'
-              className='bg-transparent outline-none border-b border-light/40 text-light placeholder:text-light text-xl pb-5'
-            />
-            <input
-              type='text'
-              name='name'
-              placeholder='Email'
-              className='bg-transparent'
-            />
-            <textarea
-              name='message'
-              cols='30'
-              rows='10'
-              className='bg-transparent'
-              placeholder='Message'
-            ></textarea>
-            <button type='submit'>Send me message</button>
+        <div className='contact-form bg-gradient-to-tl to-teal-600 from-teal-400 p-10 rounded-2xl shadow-md'>
+          <form className='flex flex-col pt-10 gap-10' autoComplete='off'>
+            <div className='form-control w-full'>
+              <input
+                type='text'
+                name='fullname'
+                placeholder='FULL NAME'
+                required
+                className='w-full bg-transparent outline-none border-b border-light/40 text-light placeholder:text-light/80 text-xl pb-4 capitalize focus-within:border-light duration-500'
+              />
+            </div>
+            <div className='form-control w-full'>
+              <input
+                type='email'
+                name='email'
+                placeholder='EMAIL ADDRESS'
+                required
+                className='w-full bg-transparent outline-none border-b border-light/40 text-light placeholder:text-light/80 text-xl pb-4 focus-within:border-light duration-500'
+              />
+            </div>
+            <div className='form-control w-full'>
+              <textarea
+                name='message'
+                rows='4'
+                placeholder='MESSAGE'
+                required
+                className='w-full bg-transparent outline-none border-b border-light/40 text-light placeholder:text-light/80 text-xl pb-4 resize-none focus-within:border-light duration-500'
+              ></textarea>
+            </div>
+            <div className='flex items-center justify-center'>
+              <button
+                type='submit'
+                className='px-5 py-3 rounded-full text-light text-xl lg:text-2xl whitespace-nowrap bg-dark/70 hover:bg-dark/80 hover:shadow-lg duration-500 uppercase'
+              >
+                Share Your Words
+              </button>
+            </div>
           </form>
         </div>
       </div>

@@ -98,6 +98,7 @@ const Navbar = () => {
               data-aos-delay='1500'
               data-aos-duration='1500'
               data-aos-easing='ease-in-out'
+              className='m-2'
             >
               <ButtonAsLink
                 href='https://drive.google.com/uc?export=download&id=1e1fFCCgcWwN4XP7Es6wAeUesUIrjZgFv'
