@@ -12,19 +12,19 @@ const ProjectCard = ({ project }) => {
       data-aos='fade-up'
       className='relative lg:grid lg:grid-cols-12 w-full lg:h-[30rem] p-5 lg:p-0 bg-white lg:bg-transparent rounded-lg lg:rounded-none space-y-5 lg:space-y-0 lg:items-center'
     >
-      {/* Project image */}
+      {/* PROJECT IMAGE */}
       <div className='z-10 lg:py-4 lg:absolute lg:grid grid-cols-12 w-full h-full content-center'>
         <div
           className={clsx(
             !project.revarse
               ? "col-span-7 "
               : "xl:col-span-7 xl:col-start-6 col-start-5 col-span-8",
-            "relative rounded w-full overflow-hidden h-[28rem] :hover:shadow-xl hover:border hover:border-accent/5 bg-dark/20 duration-300"
+            "relative rounded w-full overflow-hidden h-[28rem] :hover:shadow-xl hover:border hover:border-accent/5 bg-dark/20 duration-500"
           )}
         >
           <Link href={project.liveLink} target='_blank'>
             <div
-              className='absolute w-full h-full rounded bg-gradient-to-t from-transparent to-dark/70 transition-opacity opacity-60 hover:opacity-0 hover:cursor-pointer duration-300 z-[2]'
+              className='absolute w-full h-full rounded bg-gradient-to-t from-transparent to-dark/70 transition-opacity opacity-60 hover:opacity-0 hover:cursor-pointer duration-500 z-[2]'
               onMouseEnter={() => setScroll(true)}
               onMouseLeave={() => setScroll(false)}
             ></div>
@@ -46,7 +46,7 @@ const ProjectCard = ({ project }) => {
         </div>
       </div>
 
-      {/* Project Details */}
+      {/* PROJECT DETAILS */}
       <div className='lg:absolute lg:left-0 lg:top-0 lg:py-4 lg:grid lg:grid-cols-12 w-full h-full content-center items-center'>
         <div
           className={clsx(
@@ -66,23 +66,15 @@ const ProjectCard = ({ project }) => {
                 <span className='font-normal italic text-lg'>
                   ({project.completeDate})
                 </span>
-                <a
-                  href={project.liveLink}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
+                <Link href={project.liveLink} target='_blank'>
                   {project.title}
-                </a>
+                </Link>
               </h2>
             ) : (
               <h2 className='text-dark font-bold text-2xl leading-relaxed tracking-wider flex gap-2 items-center'>
-                <a
-                  href={project.liveLink}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
+                <Link href={project.liveLink} target='_blank'>
                   {project.title}
-                </a>
+                </Link>
                 <span className='font-normal italic text-lg'>
                   ({project.completeDate})
                 </span>
@@ -117,51 +109,48 @@ const ProjectCard = ({ project }) => {
               </span>
             ))}
           </div>
+
           <div className='z-10 flex space-x-5 font-semibold'>
-            <a
+            <Link
               href={project.liveLink}
               target={"_blank"}
-              rel='noreferrer'
-              className='flex gap-1 items-center hover:text-accent duration-300 whitespace-nowrap'
+              className='flex gap-1 items-center hover:text-accent duration-500 whitespace-nowrap'
             >
               <span>Live Demo</span>
               <FiExternalLink />
-            </a>
+            </Link>
 
             {project.fullStackLink && (
-              <a
+              <Link
                 href={project.fullStackLink}
                 target={"_blank"}
-                rel='noreferrer'
-                className='flex gap-1 items-center hover:text-accent duration-300 whitespace-nowrap'
+                className='flex gap-1 items-center hover:text-accent duration-500 whitespace-nowrap'
               >
                 <span>Full-Stack</span>
                 <FiGithub />
-              </a>
+              </Link>
             )}
 
             {project.frontEndLink && (
-              <a
+              <Link
                 href={project.frontEndLink}
                 target={"_blank"}
-                rel='noreferrer'
-                className='flex gap-1 items-center hover:text-accent duration-300 whitespace-nowrap'
+                className='flex gap-1 items-center hover:text-accent duration-500 whitespace-nowrap'
               >
                 <span>Front-End</span>
                 <FiGithub />
-              </a>
+              </Link>
             )}
 
             {project.backEndLink && (
-              <a
+              <Link
                 href={project.backEndLink}
                 target={"_blank"}
-                rel='noreferrer'
-                className='flex gap-1 items-center hover:text-accent duration-300 whitespace-nowrap'
+                className='flex gap-1 items-center hover:text-accent duration-500 whitespace-nowrap'
               >
                 <span>Back-End</span>
                 <FiGithub />
-              </a>
+              </Link>
             )}
           </div>
         </div>

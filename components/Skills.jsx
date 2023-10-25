@@ -15,7 +15,7 @@ const Skills = () => {
     <div className='wrapper section-padding' id='skills'>
       <SectionTitle title='My Skills' />
 
-      {/* Render the tabs as buttons */}
+      {/* SKILLS TABS */}
       <div className='flex justify-center mt-20'>
         {data.map((tab, index) => (
           <button
@@ -35,7 +35,7 @@ const Skills = () => {
         ))}
       </div>
 
-      {/* Render the content of the active tab */}
+      {/* ACTIVE TAB */}
       <div className='lg:px-14 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-5 mt-10'>
         {data[activeTab].content.map((skill, i) => (
           <SkillCard key={i} skill={skill} />

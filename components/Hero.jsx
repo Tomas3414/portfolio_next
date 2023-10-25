@@ -1,10 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
-import ButtonAsLink from "./ButtonAsLinks";
 import { TbMathGreater } from "react-icons/tb";
-import { SiExpress, SiNodedotjs } from "react-icons/si";
+import { SiExpress, SiLeetcode, SiNodedotjs } from "react-icons/si";
 import {
   BiLogoFacebook,
   BiLogoGithub,
@@ -13,6 +10,9 @@ import {
   BiLogoReact,
   BiLogoMongodb,
 } from "react-icons/bi";
+import Link from "next/link";
+import Image from "next/image";
+import ButtonAsLink from "./ButtonAsLinks";
 
 const Hero = () => {
   return (
@@ -133,24 +133,6 @@ const Hero = () => {
                 data-aos-once='false'
                 data-aos-easing='ease-out-cubic'
                 data-aos-anchor='.hero-section'
-                className='facebook'
-              >
-                <Link
-                  href='https://www.facebook.com/masudranashawon786'
-                  target='_blank'
-                  className='text-3xl hover:text-accent duration-500'
-                >
-                  <BiLogoFacebook />
-                </Link>
-              </div>
-              <div
-                data-aos='zoom-in'
-                data-aos-delay='2800'
-                data-aos-duration='1000'
-                data-aos-mirror='true'
-                data-aos-once='false'
-                data-aos-easing='ease-out-cubic'
-                data-aos-anchor='.hero-section'
                 className='github'
               >
                 <Link
@@ -163,7 +145,25 @@ const Hero = () => {
               </div>
               <div
                 data-aos='zoom-in'
-                data-aos-delay='2900'
+                data-aos-delay='2600'
+                data-aos-duration='1000'
+                data-aos-mirror='true'
+                data-aos-once='false'
+                data-aos-easing='ease-out-cubic'
+                data-aos-anchor='.hero-section'
+                className='leetcode'
+              >
+                <Link
+                  href='https://leetcode.com/masudranashawon'
+                  target='_blank'
+                  className='text-3xl hover:text-dark duration-500'
+                >
+                  <SiLeetcode />
+                </Link>
+              </div>
+              <div
+                data-aos='zoom-in'
+                data-aos-delay='2700'
                 data-aos-duration='1000'
                 data-aos-mirror='true'
                 data-aos-once='false'
@@ -181,7 +181,7 @@ const Hero = () => {
               </div>
               <div
                 data-aos='zoom-in'
-                data-aos-delay='3000'
+                data-aos-delay='2800'
                 data-aos-duration='1000'
                 data-aos-mirror='true'
                 data-aos-once='false'
@@ -195,6 +195,24 @@ const Hero = () => {
                   className='text-3xl hover:text-accent duration-500'
                 >
                   <BiLogoTwitter />
+                </Link>
+              </div>
+              <div
+                data-aos='zoom-in'
+                data-aos-delay='3000'
+                data-aos-duration='1000'
+                data-aos-mirror='true'
+                data-aos-once='false'
+                data-aos-easing='ease-out-cubic'
+                data-aos-anchor='.hero-section'
+                className='facebook'
+              >
+                <Link
+                  href='https://www.facebook.com/masudranashawon786'
+                  target='_blank'
+                  className='text-3xl hover:text-accent duration-500'
+                >
+                  <BiLogoFacebook />
                 </Link>
               </div>
             </div>
