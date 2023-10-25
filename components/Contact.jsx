@@ -134,7 +134,7 @@ const Contact = () => {
             <div className='flex items-center justify-center'>
               <button
                 type='submit'
-                className='px-5 py-3 rounded-full text-light text-xl lg:text-2xl whitespace-nowrap bg-dark/70 hover:bg-dark/80 hover:shadow-lg duration-500 uppercase'
+                className='submit px-5 py-3 rounded-full text-light text-xl lg:text-2xl whitespace-nowrap bg-dark/70 hover:bg-dark/80 hover:shadow-lg duration-500 uppercase'
               >
                 Share Your Words
               </button>

@@ -1,12 +1,10 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { FaCode } from "react-icons/fa";
 import Link from "next/link";
 import clsx from "clsx";
 import ButtonAsLink from "./ButtonAsLinks";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const Navbar = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -22,10 +20,6 @@ const Navbar = () => {
       return;
     }
   }, [isMobileNavOpen, setIsMobileNavOpen]);
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   return (
     <>
