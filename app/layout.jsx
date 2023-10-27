@@ -11,7 +11,7 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "Masud Rana Shawon",
+  title: "Masud Rana Shawon | Full-Stack Developer",
 };
 
 export default function RootLayout({ children }) {
