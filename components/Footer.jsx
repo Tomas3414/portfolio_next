@@ -1,3 +1,5 @@
+import { BsFillSuitHeartFill } from "react-icons/bs";
+
 const Footer = () => {
   return (
     <footer className='footer'>
@@ -8,10 +10,13 @@ const Footer = () => {
         data-aos-easing='ease-in-out'
         data-aos-anchor-placement='top center'
         data-aos-anchor='.submit'
-        className='py-6 bg-dark/80 text-light/80 text-center rounded-tl-3xl rounded-tr-3xl'
+        className='py-6 bg-dark/80 text-light/90 text-center rounded-tl-3xl rounded-tr-3xl flex justify-center items-center gap-1'
       >
-        Developed with love <span className='text-rose-400'>&#10084;</span> by
-        Masud Rana Shawon &copy; {new Date().getFullYear()}
+        <span>Developed with love</span>
+        <span className='text-rose-500'>
+          <BsFillSuitHeartFill />
+        </span>
+        <span>by Masud Rana Shawon &copy; {new Date().getFullYear()}</span>
       </p>
     </footer>
   );
