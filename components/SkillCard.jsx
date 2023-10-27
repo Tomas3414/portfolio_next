@@ -1,7 +1,9 @@
 const SkillCard = ({ skill }) => {
   return (
     <div
-      key={skill.name}
+      data-aos='zoom-in'
+      data-aos-duration='1000'
+      data-aos-easing='ease-out-cubic'
       className='flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-5 hover:scale-110 duration-500 relative group text-accent cursor-pointer gap-2'
     >
       <div className='md:text-6xl text-3xl text-accent'>{skill.icon}</div>

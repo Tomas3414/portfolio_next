@@ -13,6 +13,7 @@ const ProjectCard = ({ project }) => {
       <div className='z-10 lg:py-4 lg:absolute lg:grid grid-cols-12 w-full h-full content-center overflow-hidden'>
         <div
           data-aos='fade-right'
+          data-aos-delay='500'
           data-aos-duration='1000'
           data-aos-easing='ease-in-out'
           className={clsx(

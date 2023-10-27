@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaCalendarAlt, FaGithubAlt, FaRocket } from "react-icons/fa";
+import { FaCalendarAlt, FaGithubAlt } from "react-icons/fa";
 import { HiRocketLaunch } from "react-icons/hi2";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";

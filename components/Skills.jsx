@@ -16,9 +16,13 @@ const Skills = () => {
       <SectionTitle title='My Skills' />
 
       {/* SKILLS TABS */}
-      <div className='flex justify-center mt-20'>
+      <div className='flex justify-center mt-20 overflow-hidden'>
         {data.map((tab, index) => (
           <button
+            data-aos='fade-down'
+            data-aos-duration='1000'
+            data-aos-delay='1000'
+            data-aos-easing='ease-in-out'
             key={index}
             className={clsx(
               index === activeTab
