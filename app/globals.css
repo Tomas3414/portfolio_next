@@ -31,6 +31,10 @@ html {
   scroll-behavior: smooth !important;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* COMMON STYLES */
 .wrapper {
   @apply container mx-auto px-5 md:px-0;
