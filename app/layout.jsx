@@ -12,13 +12,14 @@ const roboto = Roboto({
 
 export const metadata = {
   title: "Masud Rana Shawon | Full-Stack Developer",
+  description: "Developer portfolio website of Masud Rana Shawon.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={clsx(roboto.className, "text-dark bg-light uppercase")}>
-        <Toaster />
+        <Toaster position='top-center' reverseOrder={false} />
         <Navbar />
         {children}
         <Footer />

@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef, useState } from "react";
 import { SiLeetcode } from "react-icons/si";
 import {
   BiLogoFacebook,
@@ -7,10 +8,89 @@ import {
   BiLogoLinkedin,
   BiLogoTwitter,
 } from "react-icons/bi";
+import { toast } from "react-hot-toast";
+import emailjs from "@emailjs/browser";
 import Link from "next/link";
 import SectionTitle from "./SectionTitle";
+import Image from "next/image";
+import clsx from "clsx";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    message: "",
+  });
+
+  const formRef = useRef(null);
+
+  /* EMAILJS INTEGRATION */
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    /* EMAIL JS */
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_ID
+      )
+      .then(
+        () => {
+          toast.custom((t) => (
+            <div
+              className={clsx(
+                t.visible ? "animate-enter" : "animate-leave",
+                "max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-dark ring-opacity-5 normal-case"
+              )}
+            >
+              <div className='flex-1 w-0 p-4'>
+                <div className='flex items-start'>
+                  <div className='flex-shrink-0 pt-0.5'>
+                    <Image
+                      className='h-10 w-10 rounded-full'
+                      src='https://res.cloudinary.com/drgxflcsb/image/upload/v1676030150/Personal%20Portfolio/masud-image3_vxmpd0.jpg'
+                      alt='Profile picture of Masud Rana Shawon'
+                      width={160}
+                      height={80}
+                      property
+                    />
+                  </div>
+                  <div className='ml-3 flex-1'>
+                    <p className='text-sm font-medium text-dark'>
+                      Masud Rana Shawon
+                    </p>
+                    <p className='mt-1 text-sm text-gray-500'>
+                      I got the message and will get back to you soon thank you.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className='flex border-l border-gray-200'>
+                <button
+                  onClick={() => toast.dismiss(t.id)}
+                  className='w-full border border-transparent rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium text-accent hover:text-accent/80 focus:outline-none focus:ring-2 focus:ring-accent/80'
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          ));
+
+          /* FIELD RESET */
+          setFormData({
+            fullName: "",
+            email: "",
+            message: "",
+          });
+        },
+        () => {
+          toast.error("Your message could not be sent successfully.");
+        }
+      );
+  };
+
   return (
     <section id='contact' className='w-[100%] section-padding overflow-hidden'>
       <div className='wrapper'>
@@ -199,13 +279,22 @@ const Contact = () => {
               data-aos-easing='ease-in-out'
               className='contact-form bg-gradient-to-tl to-teal-600 from-teal-400 p-10 rounded-2xl shadow-md'
             >
-              <form className='flex flex-col gap-10 mt-8' autoComplete='off'>
+              <form
+                ref={formRef}
+                onSubmit={sendEmail}
+                className='flex flex-col gap-10 mt-8'
+                autoComplete='off'
+              >
                 <div className='form-control w-full'>
                   <input
                     type='text'
                     name='fullname'
                     placeholder='FULL NAME'
                     required
+                    value={formData.fullName}
+                    onChange={(e) =>
+                      setFormData({ ...formData, fullName: e.target.value })
+                    }
                     className='w-full bg-transparent outline-none border-b border-light/40 text-light placeholder:text-light/80 text-xl pb-4 capitalize focus-within:border-light duration-500'
                   />
                 </div>
@@ -215,6 +304,10 @@ const Contact = () => {
                     name='email'
                     placeholder='EMAIL ADDRESS'
                     required
+                    value={formData.email}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
                     className='w-full bg-transparent outline-none border-b border-light/40 text-light placeholder:text-light/80 text-xl pb-4 focus-within:border-light duration-500'
                   />
                 </div>
@@ -224,6 +317,10 @@ const Contact = () => {
                     rows='4'
                     placeholder='MESSAGE'
                     required
+                    value={formData.message}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
                     className='w-full bg-transparent outline-none border-b border-light/40 text-light placeholder:text-light/80 text-xl pb-4 resize-none focus-within:border-light duration-500'
                   ></textarea>
                 </div>
