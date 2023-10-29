@@ -46,7 +46,7 @@ const Hero = () => {
               data-aos-mirror='true'
               data-aos-once='false'
               data-aos-easing='ease-in-out'
-              className='text-[2rem] md:text-[2.5rem] lg:text-[2.6rem] xl:text-[2.8rem] 2xl:text-[3rem] font-semibold'
+              className='text-[1.8rem] md:text-[2.5rem] lg:text-[2.6rem] xl:text-[2.8rem] 2xl:text-[3rem] font-semibold'
             >
               I&apos;m Masud Rana Shawon
               <span className='text-accent font-bold'>.</span>

@@ -70,9 +70,9 @@ const ProjectCard = ({ project }) => {
                   data-aos-delay='500'
                   data-aos-duration='1000'
                   data-aos-easing='ease-in-out'
-                  className='text-dark font-bold text-2xl leading-relaxed tracking-wider flex gap-2 items-center'
+                  className='text-dark font-bold sm:text-2xl text-xl leading-relaxed tracking-wider flex flex-col-reverse sm:flex-row sm:gap-2 items-start sm:items-center'
                 >
-                  <span className='font-normal italic text-lg'>
+                  <span className='font-normal italic sm:text-lg text-base'>
                     ({project.completeDate})
                   </span>
                   <Link href={project.liveLink} target='_blank'>
@@ -87,12 +87,12 @@ const ProjectCard = ({ project }) => {
                   data-aos-delay='500'
                   data-aos-duration='1000'
                   data-aos-easing='ease-in-out'
-                  className='text-dark font-bold text-2xl leading-relaxed tracking-wider flex gap-2 items-center'
+                  className='text-dark font-bold sm:text-2xl text-xl leading-relaxed tracking-wider flex flex-col sm:flex-row sm:gap-2 items-start sm:items-center'
                 >
                   <Link href={project.liveLink} target='_blank'>
                     {project.title}
                   </Link>
-                  <span className='font-normal italic text-lg'>
+                  <span className='font-normal italic sm:text-lg text-base'>
                     ({project.completeDate})
                   </span>
                 </h2>
@@ -104,7 +104,7 @@ const ProjectCard = ({ project }) => {
                 data-aos-delay='800'
                 data-aos-duration='1000'
                 data-aos-easing='ease-in-out'
-                className='text-accent text-base block'
+                className='text-accent text-sm sm:text-base block'
               >
                 {project.category}
               </span>
@@ -124,7 +124,7 @@ const ProjectCard = ({ project }) => {
             <p
               className={clsx(
                 !project.revarse ? "lg:text-right" : "lg:text-left",
-                "text-light text-left text-lg leading-relaxed"
+                "text-light text-left text-base sm:text-lg leading-relaxed"
               )}
             >
               {project.description}

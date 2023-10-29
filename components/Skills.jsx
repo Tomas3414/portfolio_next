@@ -30,7 +30,7 @@ const Skills = () => {
                 : "bg-white text-dark/90",
               index === 0 && "rounded-bl-2xl",
               index === data.length - 1 && "rounded-tr-2xl",
-              "flex h-[3rem] w-[10rem] items-center justify-center whitespace-nowrap border px-6 py-3 text-center text-lg font-semibold uppercase tracking-widest"
+              "flex h-[2.8rem] w-[5.8rem] sm:h-[3rem] sm:w-[10rem] items-center justify-center whitespace-nowrap border px-6 py-3 text-center text-sm sm:text-lg font-semibold tracking-widest"
             )}
             onClick={() => handleTabClick(index)}
           >

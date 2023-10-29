@@ -78,15 +78,15 @@ const About = () => {
               data-aos-delay='1500'
               data-aos-duration='1000'
               data-aos-easing='ease-in-out'
-              className='text-[1rem] xl:text-2xl tracking-wide leading-[1.5]'
+              className='text-[1rem] xl:text-[1.4rem] tracking-wide leading-[1.5]'
             >
               Welcome to my portfolio! I&apos;m deeply passionate about
-              JavaScript and its ability to create dynamic web applications. I
-              thrive on MERN stack development, constantly learning and pushing
-              boundaries to build innovative solutions. My insatiable curiosity
-              drives me to stay updated with the latest developments, aiming to
-              create impactful projects that contribute to technological
-              advancement.
+              JavaScript and its ability to create dynamic web applications. My
+              journey into web development began in July 2022 I thrive on MERN
+              stack development, constantly learning and pushing boundaries to
+              build innovative solutions. My insatiable curiosity drives me to
+              stay updated with the latest developments, aiming to create
+              impactful projects that contribute to technological advancement.
             </p>
           </div>
         </div>

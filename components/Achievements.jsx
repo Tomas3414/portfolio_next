@@ -1,21 +1,22 @@
 import { useState } from "react";
-import { FaCalendarAlt, FaGithubAlt } from "react-icons/fa";
+import { FaGithubAlt } from "react-icons/fa";
 import { HiRocketLaunch } from "react-icons/hi2";
+import { SiLeetcode } from "react-icons/si";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 
 const Achievments = () => {
-  const [experience, setExperience] = useState(0);
+  const [leetcode, setLeetcode] = useState(0);
   const [projects, setProjects] = useState(0);
   const [githubContributions, setGithubContributions] = useState(0);
 
   const handleVisibilityChange = (isVisible) => {
     if (isVisible) {
-      setExperience(1.5);
+      setLeetcode(43);
       setProjects(12);
       setGithubContributions(381);
     } else {
-      setExperience(0);
+      setLeetcode(0);
       setProjects(0);
       setGithubContributions(0);
     }
@@ -31,24 +32,19 @@ const Achievments = () => {
       >
         {/* WHEN SECTION IS VISIBLE */}
         <VisibilitySensor onChange={handleVisibilityChange}>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center place-content-center'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-start md:place-items-center md:place-content-evenly'>
             {/* Experience */}
-            <div className='experience'>
+            <div className='leetcode'>
               <div className='flex gap-2'>
                 <div className='text-4xl lg:text-6xl font-bold'>
-                  <FaCalendarAlt />
+                  <SiLeetcode />
                 </div>
                 <div className='space-y-2'>
-                  <span className='text-4xl lg:text-6xl font-bold'>
-                    <CountUp
-                      start={0}
-                      end={experience}
-                      duration={3}
-                      decimals={1}
-                    />
-                    +
+                  <span className='text-4xl lg:text-6xl font-bold flex gap-2 items-end'>
+                    <CountUp start={0} end={leetcode} duration={3} />
+                    <span className='text-2xl font-normal'>Leedcode</span>
                   </span>
-                  <p className='text-center'>Years Experience</p>
+                  <p>problems solved</p>
                 </div>
               </div>
             </div>
@@ -69,7 +65,7 @@ const Achievments = () => {
             </div>
 
             {/* Github Contributions */}
-            <div className='git-contrib'>
+            <div className='git-contrib md:col-span-2 lg:col-span-1'>
               <div className='flex gap-2'>
                 <div className='text-4xl lg:text-6xl font-bold'>
                   <FaGithubAlt />
