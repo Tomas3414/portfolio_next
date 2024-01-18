@@ -12,7 +12,7 @@ const Footer = () => {
         data-aos-anchor='.submit'
         className='py-6 bg-dark/80 text-light/90 text-center rounded-tl-3xl rounded-tr-3xl flex justify-center items-center gap-1 whitespace-nowrap text-[0.6rem] sm:text-base'
       >
-        <span>Developed with love</span>
+        <span>Developed with</span>
         <span className='text-rose-500'>
           <BsFillSuitHeartFill />
         </span>
