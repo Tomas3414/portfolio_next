@@ -35,7 +35,7 @@ const Achievments = () => {
       >
         {/* WHEN SECTION IS VISIBLE */}
         <VisibilitySensor onChange={handleVisibilityChange}>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 place-items-start md:place-items-center md:place-content-evenly">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 xl:gap-0 2xl:gap-4 place-items-start md:place-items-center md:place-content-evenly">
             {/* Experience */}
             <div className="experience">
               <div className="flex gap-2">
