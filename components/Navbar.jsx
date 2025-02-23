@@ -200,7 +200,7 @@ const Navbar = () => {
                 : "translate-y-[-100vh] rounded-bl-full rounded-br-full"
             )}
           >
-            <nav className="moile-menu flex flex-col gap-5 text-4xl">
+            <nav className="moile-menu flex flex-col gap-5 text-3xl">
               <li className="list-none">
                 <Link href="/" className="hover:text-accent duration-500">
                   Home
