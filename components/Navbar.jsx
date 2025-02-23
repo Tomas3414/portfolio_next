@@ -24,27 +24,27 @@ const Navbar = () => {
   return (
     <>
       <header
-        className='hidden lg:flex h-24 justify-between items-center border-b border-black/10 bg-white/60 backdrop-blur-xl shadow-lg fixed top-0 left-0 right-0 z-[100] font-medium rounded-bl-3xl rounded-br-3xl'
-        data-aos='slide-down'
-        data-aos-delay='700'
-        data-aos-duration='1500'
-        data-aos-easing='ease-in-out'
+        className="hidden lg:flex h-24 justify-between items-center border-b border-black/10 bg-white/60 backdrop-blur-xl shadow-lg fixed top-0 left-0 right-0 z-[100] font-medium rounded-bl-3xl rounded-br-3xl"
+        data-aos="slide-down"
+        data-aos-delay="700"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out"
       >
         {/* INNER HEADER */}
-        <div className='wrapper flex justify-between items-center'>
+        <div className="wrapper flex justify-between items-center">
           {/* LOGO */}
-          <div className='left'>
+          <div className="left">
             <div
-              className='logo flex items-center gap-2'
-              data-aos='fade'
-              data-aos-delay='1200'
-              data-aos-duration='1500'
-              data-aos-easing='ease-in-out'
+              className="logo flex items-center gap-2"
+              data-aos="fade"
+              data-aos-delay="1200"
+              data-aos-duration="1500"
+              data-aos-easing="ease-in-out"
             >
-              <span className='text-2xl text-accent animate-bounce'>
+              <span className="text-2xl text-accent animate-bounce">
                 <FaCode />
               </span>
-              <Link href='/' className='line-flow whitespace-nowrap'>
+              <Link href="/" className="line-flow whitespace-nowrap">
                 Masud Rana Shawon
               </Link>
             </div>
@@ -52,52 +52,60 @@ const Navbar = () => {
 
           {/* MIDDLE NAV */}
           <nav
-            className='flex gap-5'
-            data-aos='fade'
-            data-aos-delay='1000'
-            data-aos-duration='1500'
-            data-aos-easing='ease-in-out'
+            className="flex gap-5"
+            data-aos="fade"
+            data-aos-delay="1000"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
           >
-            <li className='list-none'>
-              <Link href='/' className='line-flow'>
+            <li className="list-none">
+              <Link href="/" className="line-flow">
                 Home
               </Link>
             </li>
-            <li className='list-none'>
-              <Link href='/#about' className='line-flow'>
+            <li className="list-none">
+              <Link href="/#about" className="line-flow">
                 About
               </Link>
             </li>
-            <li className='list-none'>
-              <Link href='/#projects' className='line-flow'>
+            <li className="list-none">
+              <Link href="/#projects" className="line-flow">
                 Projects
               </Link>
             </li>
-            <li className='list-none'>
-              <Link href='/#skills' className='line-flow'>
+            <li className="list-none">
+              <Link href="/#skills" className="line-flow">
                 Skills
               </Link>
             </li>
-            <li className='list-none'>
-              <Link href='/#contact' className='line-flow'>
+            <li className="list-none">
+              <Link href="/#contact" className="line-flow">
                 Contact
+              </Link>
+            </li>
+            <li className="list-none">
+              <Link
+                href="https://masudranashawon.netlify.app"
+                className="line-flow"
+              >
+                Portfolio Dark
               </Link>
             </li>
           </nav>
 
           {/* RIGHT NAV */}
-          <div className='right'>
+          <div className="right">
             <div
-              data-aos='fade'
-              data-aos-delay='1500'
-              data-aos-duration='1500'
-              data-aos-easing='ease-in-out'
-              className='m-2'
+              data-aos="fade"
+              data-aos-delay="1500"
+              data-aos-duration="1500"
+              data-aos-easing="ease-in-out"
+              className="m-2"
             >
               <ButtonAsLink
-                href='https://drive.google.com/uc?export=download&id=1e1fFCCgcWwN4XP7Es6wAeUesUIrjZgFv'
-                placeholder='Download Resume'
-                target='_blank'
+                href="https://drive.google.com/uc?export=download&id=1e1fFCCgcWwN4XP7Es6wAeUesUIrjZgFv"
+                placeholder="Download Resume"
+                target="_blank"
               />
             </div>
           </div>
@@ -106,38 +114,38 @@ const Navbar = () => {
 
       {/* MOBILE NAVIGATION */}
       <header
-        className='lg:hidden flex h-24 justify-between items-center border-b border-dark/10 bg-light/60 backdrop-blur-xl shadow-xl fixed top-0 left-0 right-0 z-[100]'
-        data-aos='slide-down'
-        data-aos-duration='1500'
-        data-aos-easing='ease-in-out'
+        className="lg:hidden flex h-24 justify-between items-center border-b border-dark/10 bg-light/60 backdrop-blur-xl shadow-xl fixed top-0 left-0 right-0 z-[100]"
+        data-aos="slide-down"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out"
       >
         {/* INNER HEADER */}
-        <div className='wrapper flex justify-between items-center'>
+        <div className="wrapper flex justify-between items-center">
           {/* LOGO */}
-          <div onClick={handleClickTwo} className='left'>
+          <div onClick={handleClickTwo} className="left">
             <div
-              data-aos='fade'
-              data-aos-delay='1000'
-              data-aos-duration='1500'
-              data-aos-easing='ease-in-out'
-              className='logo flex items-center gap-2 font-semibold'
+              data-aos="fade"
+              data-aos-delay="1000"
+              data-aos-duration="1500"
+              data-aos-easing="ease-in-out"
+              className="logo flex items-center gap-2 font-semibold"
             >
-              <span className='text-2xl text-accent animate-bounce'>
+              <span className="text-2xl text-accent animate-bounce">
                 <FaCode />
               </span>
-              <Link href='/' className='line-flow'>
+              <Link href="/" className="line-flow">
                 Masud Rana Shawon
               </Link>
             </div>
           </div>
 
           {/* TOGGLE BUTTON */}
-          <div className='overflow-hidden'>
+          <div className="overflow-hidden">
             <div
-              data-aos='fade'
-              data-aos-delay='1200'
-              data-aos-duration='1500'
-              data-aos-easing='ease-in-out'
+              data-aos="fade"
+              data-aos-delay="1200"
+              data-aos-duration="1500"
+              data-aos-easing="ease-in-out"
             >
               <div
                 onClick={handleClick}
@@ -183,7 +191,7 @@ const Navbar = () => {
             : "translate-y-[-100vh] rounded-bl-full rounded-br-full"
         )}
       >
-        <div className='w-screen h-full flex justify-center items-center'>
+        <div className="w-screen h-full flex justify-center items-center">
           <div
             className={clsx(
               "fixed bg-light top-0 left-0 right-0 bottom-0 h-screen w-screen z-[99] duration-1000 flex justify-center items-center",
@@ -192,48 +200,57 @@ const Navbar = () => {
                 : "translate-y-[-100vh] rounded-bl-full rounded-br-full"
             )}
           >
-            <nav className='moile-menu flex flex-col gap-5 text-4xl'>
-              <li className='list-none'>
-                <Link href='/' className='hover:text-accent duration-500'>
+            <nav className="moile-menu flex flex-col gap-5 text-4xl">
+              <li className="list-none">
+                <Link href="/" className="hover:text-accent duration-500">
                   Home
                 </Link>
               </li>
-              <li className='list-none block'>
-                <Link href='/#about' className='hover:text-accent duration-500'>
+              <li className="list-none block">
+                <Link href="/#about" className="hover:text-accent duration-500">
                   About
                 </Link>
               </li>
-              <li className='list-none'>
+              <li className="list-none">
                 <Link
-                  href='/#projects'
-                  className='hover:text-accent duration-500'
+                  href="/#projects"
+                  className="hover:text-accent duration-500"
                 >
                   Projects
                 </Link>
               </li>
-              <li className='list-none'>
+              <li className="list-none">
                 <Link
-                  href='/#skills'
-                  className='hover:text-accent duration-500'
+                  href="/#skills"
+                  className="hover:text-accent duration-500"
                 >
                   Skills
                 </Link>
               </li>
-              <li className='list-none'>
+              <li className="list-none">
                 <Link
-                  href='/#contact'
-                  className='hover:text-accent duration-500'
+                  href="/#contact"
+                  className="hover:text-accent duration-500"
                 >
                   Contact
                 </Link>
               </li>
-              <li className='list-none'>
+              <li className="list-none">
                 <Link
-                  href='https://drive.google.com/uc?export=download&id=1e1fFCCgcWwN4XP7Es6wAeUesUIrjZgFv'
-                  target='_blank'
-                  className='hover:text-accent duration-500'
+                  href="https://drive.google.com/uc?export=download&id=1e1fFCCgcWwN4XP7Es6wAeUesUIrjZgFv"
+                  target="_blank"
+                  className="hover:text-accent duration-500"
                 >
                   Resume
+                </Link>
+              </li>
+              <li className="list-none">
+                <Link
+                  href="https://masudranashawon.netlify.app"
+                  className="line-flow"
+                  target="_self"
+                >
+                  Portfolio Dark
                 </Link>
               </li>
             </nav>
